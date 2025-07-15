@@ -1,12 +1,106 @@
-# React + Vite
+# Doctor Appointment System - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend client for the Doctor Appointment System, a web application that allows patients and doctors to manage appointments, user profiles, and authentication.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   User registration and login
+-   Book, view, and manage appointments
+-   Dashboard for users and doctors
+-   Responsive and modern UI (React + Vite)
+-   API integration with backend server
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+client/
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Images and icons
+│   ├── components/         # Reusable React components
+│   │   └── Navbar.jsx
+│   ├── pages/              # Application pages
+│   │   ├── Appointments.jsx
+│   │   ├── BookAppointmentDialog.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── Users.jsx
+│   ├── App.jsx             # Main app component
+│   ├── main.jsx            # Entry point
+│   ├── App.css             # App-wide styles
+│   └── index.css           # Global styles
+├── package.json            # Project metadata and scripts
+├── vite.config.js          # Vite configuration
+└── README.md               # Project documentation
+```
+
+## Prerequisites
+
+-   Node.js (v14 or higher)
+-   npm or yarn package manager
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone <repository-url>
+    cd hospital-management-system/client
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3. Create a `.env` file in the root directory if you need to override environment variables (e.g., API base URL):
+    ```
+    VITE_API_BASE_URL=http://localhost:5000
+    ```
+
+## Running the Client
+
+### Development Mode
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Usage
+
+-   Open [http://localhost:5173](http://localhost:5173) in your browser (default Vite port)
+-   Register or log in as a user or doctor
+-   Book, view, and manage appointments
+-   Access dashboard and user management features
+
+## API Integration
+
+The client communicates with the backend server via RESTful API endpoints. Make sure the backend server is running and the API base URL is correctly set in your environment variables.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
