@@ -83,4 +83,26 @@ const Login = () => {
     );
 };
 
-export default Login;
+// Add demo credentials below the login box
+const DemoCredentials = () => (
+    <div className="flex items-center justify-center mt-4">
+        <div className="bg-blue-50 border border-blue-200 rounded px-4 py-2 text-blue-800 text-base">
+            <div className="font-semibold mb-1">Demo Credentials</div>
+            <div>
+                Email: <span className="font-mono">01piyush008@gmail.com</span>
+            </div>
+            <div>
+                Password: <span className="font-mono">123456</span>
+            </div>
+        </div>
+    </div>
+);
+
+export default function LoginWithDemo() {
+    return (
+        <>
+            <Login />
+            <DemoCredentials />
+        </>
+    );
+}
