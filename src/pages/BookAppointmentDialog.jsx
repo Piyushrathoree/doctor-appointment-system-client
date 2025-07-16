@@ -30,7 +30,7 @@ const BookAppointmentDialog = ({ open, onClose }) => {
         const fetchDoctors = async () => {
             try {
                 const res = await axios.get(
-                    "http://localhost:5000/api/users?role=doctor"
+                    "https://doctor-appointment-system-server-1.onrender.com/api/users?role=doctor"
                 );
                 setDoctors(res.data);
             } catch {
@@ -52,10 +52,13 @@ const BookAppointmentDialog = ({ open, onClose }) => {
         setBookingSuccess("");
         setLoading(true);
         try {
-            await axios.post("http://localhost:5000/api/appointments", {
-                ...form,
-                patientEmail: user.email,
-            });
+            await axios.post(
+                "https://doctor-appointment-system-server-1.onrender.com/api/appointments",
+                {
+                    ...form,
+                    patientEmail: user.email,
+                }
+            );
             setBookingSuccess("Appointment booked successfully!");
             setTimeout(() => {
                 setLoading(false);

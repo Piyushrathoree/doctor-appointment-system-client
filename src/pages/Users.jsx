@@ -29,7 +29,7 @@ const Users = () => {
             setLoading(true);
             setError("");
             try {
-                let url = "http://localhost:5000/api/users";
+                let url = "https://doctor-appointment-system-server-1.onrender.com/api/users";
                 if (role !== "all") url += `?role=${role}`;
                 const res = await axios.get(url);
                 setUsers(res.data);

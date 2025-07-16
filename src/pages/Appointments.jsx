@@ -31,7 +31,7 @@ const Appointments = () => {
             setError("");
             try {
                 const res = await axios.get(
-                    "http://localhost:5000/api/appointments",
+                    "https://doctor-appointment-system-server-1.onrender.com/api/appointments",
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem(
@@ -56,7 +56,7 @@ const Appointments = () => {
         if (!cancelId) return;
         try {
             await axios.delete(
-                `http://localhost:5000/api/appointments/${cancelId}`,
+                `https://doctor-appointment-system-server-1.onrender.com/api/appointments/${cancelId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem(
@@ -79,7 +79,7 @@ const Appointments = () => {
         if (!deleteId) return;
         try {
             await axios.delete(
-                `http://localhost:5000/api/appointments/${deleteId}`,
+                `https://doctor-appointment-system-server-1.onrender.com/api/appointments/${deleteId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem(
